@@ -1,0 +1,67 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="card ">
+        <div class="card-body">
+          <div class="form-group">
+            <form class="" action="index.html" method="post">
+              <input type="checkbox" name="Technology" value="">
+              <label for="">Technology</label>
+              <br>
+              <input type="checkbox" name="Marketing" value="">
+              <label for="">Marketing</label>
+              <br>
+              <input type="checkbox" name="B2B" value="">
+              <label for="">B2B</label>
+
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-10">
+      <div class="card ">
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+            <%  images.forEach(function(image){ %>
+              <div class="note col-lg-4">
+                <img class="note" src="/uploads/<%=image.image%>" alt="">
+                <p> <%=image.imageName%></p>
+              </div>
+            <%});%>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</div>
+
+
+<%- include('partials/footer') %>

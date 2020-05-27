@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card ">
+        <div class="card-body">
+          <a href="#">Upload image</a>
+          <br>
+          <hr>
+          <a href="#">Download report</a>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card ">
+        <div class="card-body">
+          <form class="" action="/contributor" method="post" enctype="multipart/form-data">
+            <h3>Upload Image</h3>
+            <div class="form-group">
+              <label for="">Image Name</label>
+              <input type="text" class="form-control" name="imageName" value="">
+            </div>
+            <div class="form-group">
+              <label for="">Image</label>
+              <input type="file" class="form-control" name="Browse" value="">
+            </div>
+            <div class="form-group">
+              <label for="">Category</label>
+              <select id="Category" class="btn btn-block border" name="Category">
+                <option value="blank"></option>
+                <option value="technology">Technology</option>
+                <option value="marketing">Marketing</option>
+                <option value="b2b">B2B</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-warning" name="button">Save</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%- include('partials/footer') %>

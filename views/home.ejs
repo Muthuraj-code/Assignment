@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+
+
+<div class="container mt-5">
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h1>Sign Up</h1>
+
+          <!-- Makes POST request to /register route -->
+          <form action="/register" method="POST">
+            <div class="form-group">
+              <label for="email">Name</label>
+              <input type="text" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <div class="form-group">
+              <input type="radio" name="userType" value="normalUser">
+              <label for="normalUser">Normal User</label>
+              <br>
+              <input type="radio" name="userType" value="contributor">
+              <label for="contributor">contributor</label>
+              </div>
+            <button type="submit" class="btn btn-warning">Register</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h1>Sign In</h1>
+
+          <!-- Makes POST request to /login route -->
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <label for="email">Name</label>
+              <input type="text" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <button type="submit" class="btn btn-warning">Login</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include('partials/footer') %>
